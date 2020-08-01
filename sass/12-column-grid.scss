@@ -1,0 +1,97 @@
+@use 'css-reset';
+
+$gutter: 15px;
+
+.container {
+  padding: 0 $gutter;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-flow: wrap;
+  margin: 0 (-$gutter);
+}
+
+.col {
+  flex: 1 0 0%;
+  padding: 0 $gutter;
+}
+
+$i: 1;
+@while $i < 13 {
+  .col-#{$i} {
+    flex: 0 0 auto;
+    width: $i / 12 * 100%;
+    padding: 0 $gutter;
+  }
+  $i: $i + 1;
+}
+
+@media (min-width: 576px) {
+  .col-sm {
+    flex: 1 0 0%;
+    padding: 0 $gutter;
+  }
+
+  $i: 1;
+  @while $i < 13 {
+    .col-sm-#{$i} {
+      flex: 0 0 auto;
+      width: $i / 12 * 100%;
+      padding: 0 $gutter;
+    }
+    $i: $i + 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .col-md {
+    flex: 1 0 0%;
+    padding: 0 $gutter;
+  }
+
+  $i: 1;
+  @while $i < 13 {
+    .col-md-#{$i} {
+      flex: 0 0 auto;
+      width: $i / 12 * 100%;
+      padding: 0 $gutter;
+    }
+    $i: $i + 1;
+  }
+}
+
+@media (min-width: 992px) {
+  .col-lg {
+    flex: 1 0 0%;
+    padding: 0 $gutter;
+  }
+
+  $i: 1;
+  @while $i < 13 {
+    .col-lg-#{$i} {
+      flex: 0 0 auto;
+      width: $i / 12 * 100%;
+      padding: 0 $gutter;
+    }
+    $i: $i + 1;
+  }
+}
+
+@media (min-width: 1200px) {
+  .col-xl {
+    flex: 1 0 0%;
+    padding: 0 $gutter;
+  }
+
+  $i: 1;
+  @while $i < 13 {
+    .col-xl-#{$i} {
+      flex: 0 0 auto;
+      width: $i / 12 * 100%;
+      padding: 0 $gutter;
+    }
+    $i: $i + 1;
+  }
+}
